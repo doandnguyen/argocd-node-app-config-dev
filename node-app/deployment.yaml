@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: dev-namespace
-          image: doandnguyen/node-dev:1
+          image: doandnguyen/node-dev:2
           ports:
             - containerPort: 3000
