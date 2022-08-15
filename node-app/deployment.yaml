@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-namespace
+spec:
+  selector:
+    matchLabels:
+      app: dev-namespace
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dev-namespace
+    spec:
+      containers:
+        - name: dev-namespace
+          image: doandnguyen/node-dev:1
+          ports:
+            - containerPort: 3000
